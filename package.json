@@ -1,0 +1,22 @@
+{
+  "name": "ged",
+  "version": "1.0.0",
+  "description": "Gestion documentaire",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftounga/GedClient.git"
+  },
+  "author": "TOUNGA Franck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ftounga/GedClient/issues"
+  },
+  "homepage": "https://github.com/ftounga/GedClient#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
