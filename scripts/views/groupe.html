@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <center>Liste des groupes</center>
+  </div>
+  </div>
+
+  <div class="panel-body" >
+    <ul class="list-group">
+      <center>
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><caption>
+          
+          <th>Id</th>
+          <th><center>Noms Groupes</center></th>
+          
+          <tr ng-repeat="tab in myGroup" my-list>
+              
+          </tr>
+        </table>
+       </li>
+      
+
+    </ul>
+
+  </div>
+
+  <div class="panel-footer">
+    <div ng-show="false">
+      <center>
+      <button type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-plus"> </span>
+        Create
+      </button>
+      <button type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-search"> </span>
+        View
+      </button>
+      <button type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-pencil"> </span>
+        Edit
+      </button>
+      <button type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-trash"> </span>
+        Delete
+      </button>
+     </center> 
+    </div>
+  </div>
+</div>

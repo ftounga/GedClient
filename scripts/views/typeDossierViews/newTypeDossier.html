@@ -1,0 +1,124 @@
+<div>
+     <div class="">
+            <h4 class="modal-title" id="modal-title">Entrez un nouveau type de dossier</h4>
+        </div>
+        <div class="" id="modal-body">
+          <center>
+            <ul class="list-group">
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Nom du dossier  </label>
+              <input type="text" class="form-control" ng-model="nom"></input>
+            </li>
+            <div >Statut du dossier: <select ng-init="statut.nom='incomplet'" ng-model="statut" ng-options="statut.nom for statut in status" placeholder="type" ng-click="" >
+                  </select>
+            </div>      
+          </ul>
+          </center>
+                    <!-- +++++++++++++++++++++++ Type Metadonnée  ++++++++++++++++++++++++++++++-->
+          <center>
+            <div><button class="" ng-click="vue()">Ajouter un type de metadonnée</button></div>
+            <div ng-if="vueIf">
+            <div >Nom de la métadonnée: <select ng-init="" ng-model="typeMetadonnee" ng-options="typeM.nom for typeM in typeMetas" placeholder="type" ng-click="" >
+                  </select>
+            </div>
+            <table class="table table-bordered table-striped table-condensed" ng-if="typeMetadonnee.nom">    
+                <caption><center>Metadonnées</center><caption>
+
+                <th><center>nom Metadonnee</center></th>
+                <th><center>Regex</center></th>
+                <th><center>Valeur Defaut</center></th>
+                <th><center>Obligatoire?</center></th>
+                <th><center>Supprimer</center></th>
+          
+                <tr>              
+                  <td><center>{{typeMetadonnee.nom}}</center></td>
+                  <td><center><input type="text" class="form-control" ng-model="typeDossierTypeMetadonnee.regex"></input></center></td>
+                  <td><center><input type="text" class="form-control" ng-model="typeDossierTypeMetadonnee.defaultValue"></input></center></td>
+                  <td>
+                    <select ng-model="typeDossierTypeMetadonnee.isObligatoire" class="form-control">
+                       <option ng-selected="true">Oui</option>
+                       <option ng-selected="false">Non</option>
+                    </select>
+                  </td>
+                  <td><center><a href="" ng-click="ajouterMeta(typeDossierTypeMetadonnee,typeMetadonnee.id,typeMetadonnee.nom)"><span>Ajouter</span></a></center></td>
+                </tr>
+
+        </table>
+        </div>
+        </center>
+        <div ng-if="typeDossierTypeMetadonnees.length">
+          <table class="table table-bordered table-striped table-condensed">    
+                <caption><center>Metadonnées</center><caption>
+                 
+                <th><center>nom Metadonnee</center></th>
+                <th><center>Regex</center></th>
+                <th><center>Valeur Defaut</center></th>
+                <th><center>Obligatoire?</center></th>
+                <th><center>Supprimer</center></th>
+          
+                <tr ng-repeat="t in typeDossierTypeMetadonnees">              
+                  <td><center>{{t.nom}}</center></td>
+                  <td><center>{{t.regex}}</td>
+                  <td><center>{{t.defaultValue}}</center></td>
+                  <td ng-show="{{t.isObligatoire}}"><center>Oui</center></td>
+                  <td ng-show="{{!t.isObligatoire}}"><center>Non</center></td>
+                  <td><center><a href=""><span>Supprimer</span></a></center></td>
+                </tr>
+
+        </table>
+        </div>
+              <!-- +++++++++++++++++++++++++++ Type Document    ++++++++++++++++++++++++++++++-->
+
+              <center>
+            <div><button class="" ng-click="vue1()">Ajouter un type de Document</button></div>
+            <div ng-if="vueIf1">
+            <div >Nom du document: <select ng-init="" ng-model="typeDocument" ng-options="typeD.nom for typeD in typeDocs" placeholder="type" ng-click="" >
+                  </select>
+            </div>
+            <table class="table table-bordered table-striped table-condensed" ng-if="typeDocument.nom">    
+                <caption><center>Document</center><caption>
+
+                <th><center>Type document</center></th>
+                <th><center>Obligatoire?</center></th>
+                <th><center>Supprimer</center></th>
+          
+                <tr>              
+                  <td><center>{{typeDocument.nom}}</center></td>
+                  <td>
+                    <select ng-model="typeDossierTypeDocument.isObligatoire" class="form-control">
+                       <option ng-selected="true">Oui</option>
+                       <option ng-selected="false">Non</option>
+                    </select>
+                  </td>
+                  <td><center><a href="" ng-click="ajouterDoc(typeDossierTypeDocument,typeDocument.id,typeDocument.nom)"><span>Ajouter</span></a></center></td>
+                </tr>
+
+        </table>
+        </div>
+        </center>
+        <div ng-if="typeDossierTypeDocuments.length">
+          <table class="table table-bordered table-striped table-condensed">    
+                <caption><center>Documents</center><caption>
+                 
+                <th><center>nom Type document</center></th>
+                <th><center>Obligatoire?</center></th>
+                <th><center>Supprimer</center></th>
+          
+                <tr ng-repeat="t in typeDossierTypeDocuments">              
+                  <td><center>{{t.nom}}</center></td>
+                  <td ng-show="{{t.isObligatoire}}"><center>Oui</center></td>
+                  <td ng-show="{{!t.isObligatoire}}"><center>Non</center></td>
+                  <td><center><a href=""><span>Supprimer</span></a></center></td>
+                </tr>
+
+        </table>
+        </div>
+
+              <!-- +++++++++++++++++++++++++++Enregistrement +++++++++++++++++++++++++++++++++++ -->
+
+        </div>
+            <div class="">
+            <button class="btn btn-primary" type="button" ng-click="save(nom,statut)">Enregistrer</button>
+            <button class="btn btn-warning" type="button" ng-click="close()">Annuler</button>
+        </div> 
+</div>

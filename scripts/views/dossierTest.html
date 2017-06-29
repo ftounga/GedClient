@@ -1,0 +1,101 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <center>Liste des Dossiers</center>
+  </div>
+  </div>
+
+  <div class="panel-body" >
+    <div class="toolbar">
+    
+    </div>
+       
+       <form class="form-inline">
+          <div class="form-group">
+            <label >Search</label>
+            <input type="text" ng-model="search" class="form-control" placeholder="Search">
+            <button id="addButton" class="btn btn-default" onClick="location.href='#newDossier'; ">Nouveau 
+             <i class="glyphicon glyphicon-plus"></i>
+             </button>
+            <button id="deleteButton" class="btn btn-default"> Supprimer
+             <i class="glyphicon glyphicon-trash"></i>
+            </button>
+            <button id="deleteAllButton" class="btn btn-default"> Tout Supprimer
+            <i class="glyphicon glyphicon-trash"></i>
+            </button>
+             <button id="viewButton" class="btn btn-default" onClick="save()"> {{aze}}
+            <i class="glyphicon glyphicon-eye-open"></i>
+            </button>
+          </div>
+
+        </form>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th ng-click="sort('id')">Id
+                <span class="glyphicon sort-icon" ng-show="sortKey=='id'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+              </th>
+              <th ng-click="sort('first_name')">First Name
+                <span class="glyphicon sort-icon" ng-show="sortKey=='first_name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+              </th>
+              <th ng-click="sort('last_name')">Last Name
+                <span class="glyphicon sort-icon" ng-show="sortKey=='last_name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+              </th>
+              <th ng-click="sort('hobby')">Hobby
+                <span class="glyphicon sort-icon" ng-show="sortKey=='hobby'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr dir-paginate="user in users|orderBy:sortKey:reverse|filter:search|itemsPerPage:7">
+              <td>
+                  <input type="checkbox" ng-model="user.selected" ng-checked="isSelect" ng-click="setSelected(user)" ></input>
+              </td>
+              <td>{{user.id}}</td>
+              <td>{{user.first_name}}</td>
+              <td>{{user.last_name}}</td>
+              <td>{{user.hobby}}</td>
+            </tr>
+          </tbody>
+        </table> 
+        <dir-pagination-controls
+          max-size="5"
+          direction-links="true"
+          boundary-links="true">
+        </dir-pagination-controls>
+
+  </div>
+
+  <div class="panel-footer">
+    <div ng-show="false">
+      <center>
+      <button type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-plus"> </span>
+        Create
+      </button>
+      <button type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-search"> </span>
+        View
+      </button>
+      <button type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-pencil"> </span>
+        Edit
+      </button>
+      <button type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-trash"> </span>
+        Delete
+      </button>
+     </center> 
+    </div>
+  </div>
+</div>
+
+<script src="/home/fredric/Téléchargements/bootstrap-table-215a8006dcf0601b9c42ffbbc5319aa6e7da10a8/docs/assets/js/jquery.min.js"></script>
+<script src="/home/fredric/Téléchargements/bootstrap-table-215a8006dcf0601b9c42ffbbc5319aa6e7da10a8/src/bootstrap-table.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
+
+<script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="scripts/dirPagination.js"></script>
+    
+  

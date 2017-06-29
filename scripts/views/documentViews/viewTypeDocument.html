@@ -1,0 +1,129 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+     <center>
+      <a href="" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-search"> </span>
+        Cloner 
+      </a>
+      <a href="" >
+        <span class="glyphicon glyphicon-pencil-link"> </span>
+        Modifier
+      </a>
+      <a type="button" class="btn btn-outline-secondary">
+        <span class="glyphicon glyphicon-trash"> </span>
+        Supprimer
+      </a>
+     </center> 
+  </div>
+  <div class="panel-heading">
+      <center>Type de Document</center>
+  </div>
+  <div class="panel-body">
+
+    <div class="row">
+        <div class="col-md-6">
+
+          <ul class="list-group">            
+            <li class="list-group-item list-group-item-success">
+              <span>nom : {{user.nom}}</span>
+            </li>            
+          </ul>
+
+        </div>
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+             <li class="list-group-item list-group-item-success">
+               <span>Statut : {{user.statut}}</span>
+             </li>  
+           </ul>
+        </div>
+
+        <div class="col-md-6">
+
+          <ul class="list-group">            
+            <li class="list-group-item list-group-item-success">
+              <span>Date Dernière Modification : {{user.date_last_modification | date:'yyyy-MM-dd'}}</span>
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <span>User Dernière Modification : {{user.user_last_modification}}</span>
+            </li> 
+                        
+          </ul>
+
+        </div>
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">              
+              <li class="list-group-item list-group-item-success">
+                  <span>Date Création : {{user.date_creation | date:'yyyy-MM-dd'}}</span>
+              </li> 
+               <li class="list-group-item list-group-item-success">
+                  <span>User Création : {{user.user_creation}}</span>
+              </li>      
+           </ul>
+        </div>
+
+        <!-- ++++++++++++++++++++++++++++++++++ Métadonnées ++++++++++++++++++++++++++++++++++++ -->
+
+        <div class="col-md-6">
+           <ul class="list-group" ng-if="listTypeM.length">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><center>Metadonnées</center><caption>
+
+            <th><center>Type Metadonnee</center></th>
+            <th><center>Obligatoire</center></th>
+            <th><center>Regex</center></th>
+            <th><center>Default value</center></th>
+                
+          <tr ng-repeat="meta in resultMeta">              
+              <td><center>{{meta.nom}}</center></td>
+              <td><center>{{meta.isObligatoire}}</center></td>
+              <td><center>{{meta.regex}}</center></td>
+              <td><center>{{meta.defaultValue}}</center></td>              
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+        <!-- ++++++++++++++++++++++++++++++++++ Dossiers ++++++++++++++++++++++++++++++++++++ -->
+
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group" ng-if="listTypeDossiers.length">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><center>Dossiers</center><caption>
+
+            <th><center>Type Document</center></th>
+            <th><center>Obligatoire</center></th>
+            
+          <tr ng-repeat="dos in resultDos">              
+              <td><center>{{dos.nom}}</center></td>
+              <td><center>{{dos.isObligatoire}}</center></td>             
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+      </div>
+   
+  </div>
+  </div>
+
+  
+
+  <div class="panel-footer">
+    
+  </div>
+</div>

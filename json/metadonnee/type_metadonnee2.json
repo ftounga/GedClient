@@ -1,0 +1,193 @@
+[
+
+{
+    "id": 0,
+    "nom": "metadonne0",
+    "type": "string",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 1,
+    "nom": "metadonne1",
+    "type": "number",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "TENOR",
+    "user_modif": "TENOR"
+},
+{
+    "id": 2,
+    "nom": "metadonne2",
+    "type": "string",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 3,
+    "nom": "metadonne3",
+    "type": "number",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 4,
+    "nom": "metadonne4",
+    "type": "boolean",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 5,
+    "nom": "metadonne5",
+    "type": "boolean",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 6,
+    "nom": "metadonne6",
+    "type": "string",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 7,
+    "nom": "metadonne7",
+    "type": "list",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 8,
+   "nom": "metadonne8",
+    "type": "string",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 9,
+    "nom": "metadonne9",
+    "type": "string",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 10,
+    "nom": "metadonne10",
+    "type": "boolean",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 11,
+    "nom": "metadonne11",
+    "type": "boolean",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 12,
+    "nom": "metadonne12",
+    "type": "string",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 13,
+    "nom": "metadonne13",
+    "type": "number",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 14,
+    "nom": "metadonne14",
+    "type": "array",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 15,
+    "nom": "metadonne15",
+    "type": "array",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 16,
+    "nom": "metadonne17",
+    "type": "array",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 17,
+    "nom": "metadonne19",
+    "type": "string",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 18,
+    "nom": "metadonne18",
+    "type": "list",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 19,
+    "nom": "metadonne19",
+    "type": "list",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+},
+{
+    "id": 20,
+    "nom": "metadonne20",
+    "type": "string",
+    "datecre": "11/02/2015",
+    "datemodif": "24/09/2016",
+    "user_cre": "PAUL",
+    "user_modif": "PAUL"
+}
+
+]

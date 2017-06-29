@@ -1,0 +1,104 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <center>Modifier Dossier</center>
+  </div>
+
+  <div class="panel-body">
+    
+    <ng-form ng-submit="save()" name="myForm">
+
+    <div class="row">
+        <div class="col-md-6">
+
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-success" >
+              <label for="text"> id  </label>
+              <input type="text" class="form-control" ng-model="donne.id">
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Nom  </label>
+              <input type="text" class="form-control" ng-model="donne.nom">
+            </li>         
+          </ul>
+
+        </div>
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+              <li class="list-group-item list-group-item-success">
+              <label for="text"> Owner  </label>
+              <input type="text" class="form-control" ng-model="donne.owner">
+            </li> 
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Statut  </label>
+              <input type="text" class="form-control" ng-model="donne.statut">
+            </li>  
+           </ul>
+
+        </div>
+
+        
+
+        <div class="col-md-6">
+           <ul class="list-group">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><center>Metadonnées</center><caption>
+
+            <th><center>Type Metadonnee</center></th>
+            <th><center>Valeur</center></th>
+            <th>Modifier</th>
+            
+          
+          <tr>              
+              <td><center>metadonnée1</center></td>
+              <td><center>valeur1</center></td>
+              <td><center><span class="glyphicon glyphicon-pencil"></span></center></td>              
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><center>Documents</center><caption>
+
+            <th><center>Type Document</center></th>
+            <th><center>Nom Document</center></th>
+            <th><center>Modifier</center></th>
+            
+            
+          
+          <tr>              
+              <td><center>type1</center></td>
+              <td><center>document1</center></td>
+              <td><center><span class="glyphicon glyphicon-pencil"></span></center></td>             
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+      </div>
+
+      </div>
+      <center>
+        <button class="btn btn-outline-success" type="submit" ng-click="save(doc)" >Enregistrer</button>
+        <button class="btn btn-outline-success" type="submit" ng-click="save(doc)" >Annuler</button>
+      </center>
+      </ng-form>
+  </div>
+
+</div>

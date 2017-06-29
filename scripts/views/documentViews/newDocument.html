@@ -1,0 +1,94 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <center>Nouveau Document</center>
+  </div>
+
+  <div class="panel-body">
+    
+    <ng-form ng-submit="save(data)" name="myForm">
+
+    <div class="row">
+        <div class="col-md-6">
+
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-success" >
+              <label for="text"> Type Document :  </label>
+              <span>{{type_document | uppercase}}</span>
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Nom  </label>
+              <input type="text" class="form-control" ng-model="data.name"></input>
+            </li>
+                     
+          </ul>
+
+        </div>
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+              <label for="text"> Owner  </label>
+              <input type="text" class="form-control" ng-model="data.owner"></input>
+            </li> 
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Statut  </label>
+              <input type="text" class="form-control" ng-model="data.statut"></input>
+            </li>  
+           </ul>
+
+        </div>
+
+        
+
+        <div class="col-md-6">
+           <ul class="list-group">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><center>Metadonnées</center><caption>
+
+            <th><center>Type Metadonnee</center></th>
+            <th><center>Valeur</center></th>
+          
+          <tr>              
+              <td><center>metadonee 1</center></td>
+              <td><center>valeur1</center></td>
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><center>Dossiers</center><caption>
+
+            <th><center>Nom Dossier</center></th>
+          
+          <tr>              
+              <td><center>nom du dossier</center></td>
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+      </div>
+      <center>
+        <button class="btn btn-outline-success" type="button" ng-click="save(data)" >Enregistrer</button>
+        <button class="btn btn-outline-success" type="submit" ng-click="" >Annuler</button>
+      </center>
+      </ng-form>
+  </div>
+
+</div>

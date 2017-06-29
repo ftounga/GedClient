@@ -1,0 +1,25 @@
+.my_cadre{
+	border: 1px solid #D3D3D3;
+}
+.fond{
+	background-color: #F5F5F5;
+}
+.fond_zone_image{
+	background-color: #D8BFD8;
+}
+
+.taille{
+	height: 70%;
+}
+.my_center{
+	padding-top: 20px;
+}
+.my_table{
+	border: 1px solid red;
+}
+.space{
+	margin-bottom: 10px;
+}
+.space_horizontal{
+	padding-left: 5px;
+}

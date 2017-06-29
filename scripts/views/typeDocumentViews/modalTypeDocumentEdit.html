@@ -1,0 +1,22 @@
+<div>
+     <div class="modal-header">
+            <h4 class="modal-title" id="modal-title">Modifiez le type de document</h4>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <center>
+            <ul class="list-group">
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Nom du document  </label>
+              <input type="text" class="form-control" ng-model="data.nom"></input>
+            </li>
+            <div >Statut du document: <select ng-init="" ng-model="statut" ng-options="statut.nom for statut in status" placeholder="type" ng-click="" >
+                  </select>
+            </div>          
+          </ul>
+          </center>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="send()">Modifier</button>
+            <button class="btn btn-warning" type="button" ng-click="close()">Annuler</button>
+        </div>
+</div>

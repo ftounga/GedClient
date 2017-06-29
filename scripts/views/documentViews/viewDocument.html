@@ -1,0 +1,110 @@
+<div class="panel panel-default">
+  <div >
+     <center>
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" data-target="#menu1">Document</a></li>
+          <li><a data-toggle="tab" data-target="#menu2">Métadonnées</a></li>
+          <li><a data-toggle="tab" data-target="#menu3">Détails</a></li>
+          <li><a data-toggle="tab" data-target="#menu4">Dossiers</a></li>      
+        </ul>
+  </div>
+
+  <div class="panel-body">
+
+    <!-- Première menuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu -->
+    <div class="tab-content">
+      <div id="menu3" class="tab-pane fade">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-success" >
+              <span>id : {{user.id}}</span>
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <span>nom : {{user.nom}}</span>
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <span>Statut : {{user.statut}}</span>
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <span>Owner : {{user.owner}}</span>
+            </li>            
+          </ul>
+        </div>
+
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+               <li class="list-group-item list-group-item-success">
+                  <span>Date Dernière Modification : {{user.datemodif}}</span>
+              </li>
+              <li class="list-group-item list-group-item-success">
+                  <span>User Dernière Modification : {{user.user_modif}}</span>
+              </li> 
+              <li class="list-group-item list-group-item-success">
+                  <span>Date Création : {{user.datecre}}</span>
+              </li> 
+               <li class="list-group-item list-group-item-success">
+                  <span>User Modification : {{user.user_modif}}</span>
+              </li>      
+           </ul>          
+        </div>
+      </div>
+      <!-- deuxième menuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu -->
+
+      <div id="menu2" class="col-md-12 tab-pane fade">
+                  <div class="col-md-12">
+            <div class="col-md-12">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-info">
+                  <center>Métadonnées</center>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée1 : valeur1
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée2 : valeur2
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée3 : valeur3
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+              </ul>             
+            </div>
+        </div>
+
+    </div>
+
+    <!-- troisième menuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu -->
+
+    <div id="menu1" class="col-md-12 tab-pane fade in active">
+          <div class="space">
+              <center>
+                <button class="btn btn-primary">Supprimer le document</button>
+              </center>  
+          </div>
+          <div>
+            <object data="pdf/3.pdf" type="application/pdf" title="cv" width="880" height="800">
+            </object>
+          </div>          
+    </div>
+
+    <div id="menu4" class="col-md-6 col-md-offset-3 tab-pane fade in active">
+        <table>
+          <tr>
+            <th>Dossiers</th>
+          </tr>
+          <tr ng-repeat="doc in docs">
+            <td><center>{{doc.nom}}</center></td>
+          </tr>
+        </table>
+    </div>
+      
+   </div>
+
+  </div>
+
+  <div class="panel-footer">
+    
+  </div>
+</div>

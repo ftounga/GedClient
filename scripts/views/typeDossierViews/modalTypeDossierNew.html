@@ -1,0 +1,24 @@
+<div>
+     <div class="modal-header">
+            <h4 class="modal-title" id="modal-title">Entrez un nouveau de type de dossier</h4>
+        </div>
+        <div class="modal-body" id="modal-body">
+          {{obj.typeMetadonnee}}
+          <center>
+            <ul class="list-group">
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Nom du type de dossier  </label>
+              <input type="text" class="form-control" ng-model="typeDossier.nom"></input>
+            </li>
+            <li class="list-group-item list-group-item-success">
+               Type metadonnée: <select ng-init="" ng-model="obj.typeMetadonnee" ng-options="typeMeta.nom for typeMeta in typeMetas" placeholder="type" ng-click="" >
+                  </select>
+            </li>          
+          </ul>
+          </center>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="send()">Ajouter</button>
+            <button class="btn btn-warning" type="button" ng-click="close()">Annuler</button>
+        </div>
+</div>

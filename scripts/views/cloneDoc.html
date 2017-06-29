@@ -1,0 +1,153 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <center>Type Document</center>
+  </div>
+
+  <div class="panel-body">
+    
+    <ng-form ng-submit="save()" name="myForm">
+
+    <div class="row">
+        <div class="col-md-6">
+
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-success" >
+              <label for="text"> id  </label>
+              <input type="text" class="form-control" ng-model="doc.id">
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Nom  </label>
+              <input type="text" class="form-control" ng-model="doc.name">
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Owner  </label>
+              <input type="text" class="form-control" ng-model="doc.type">
+            </li> 
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Statut  </label>
+              <input type="text" class="form-control" ng-model="doc.type">
+            </li>           
+          </ul>
+
+        </div>
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+              <li class="list-group-item list-group-item-success">
+                  <label for="text"> Date Création  </label>
+                  <input type="text" class="form-control" ng-model="doc.valeur">
+              </li>  
+               <li class="list-group-item list-group-item-success">
+                  <label for="text"> Date dernière Modification  </label>
+                  <input type="text" class="form-control" ng-model="doc.regex">
+              </li>
+              <li class="list-group-item list-group-item-success">
+                  <label for="text"> User Création  </label>
+                  <input type="text" class="form-control" ng-model="doc.valeur">
+              </li> 
+              <li class="list-group-item list-group-item-success">
+                  <label for="text"> User Dernière modification  </label>
+                  <input type="text" class="form-control" ng-model="doc.valeur">
+              </li>       
+           </ul>
+
+          
+
+        </div>
+
+        
+
+        <div class="col-md-8 col-md-offset-2">
+           <ul class="list-group">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption>Type Metadonnées: <span class="glyphicon glyphicon-plus"></span><caption>
+
+            <th><center>Nom Métadonnée</center></th>
+            <th><center>Type</center></th>
+            <th><center>Regex</center></th>
+            <th><center>Obligatoire</center></th>
+            <th><center>Retirer</center></th>
+          
+          <tr>
+              
+              <td><center><select id="select" class="form-control" ng-model="doc.typeDossier">
+                         <option>dossier 1</option>
+                         <option>dossier 2</option>
+                         <option>dossier 3</option>
+                    </select></center></td>
+              
+              <td><center><select id="select" class="form-control" ng-model="doc.isObligatoireDir">
+                         <option>type 1</option>
+                         <option>type 2</option>
+                         
+                    </select></center></td>
+
+              <td><center><select id="select" class="form-control" ng-model="doc.isObligatoireDir">
+                         <option>regex 1</option>
+                         <option>regex 2</option>
+                         
+                    </select></center></td>
+
+              <td><center><select id="select" class="form-control" ng-model="doc.isObligatoireDir">
+                         <option>Oui</option>
+                         <option>Non</option>
+                         
+                    </select></center></td>
+
+              <td><center><span class="glyphicon glyphicon-minus"></center></td>
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2">
+           <ul class="list-group">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption>Type de Dossier: <span class="glyphicon glyphicon-plus"></span><caption>
+
+            <th><center>Nom Document</center></th>
+            <th><center>Obligatoire</center></th>
+            <th><center>Retirer</center></th>
+          
+          <tr>
+              
+              <td><center><select id="select" class="form-control" ng-model="doc.typeDoc">
+                         <option>document 1</option>
+                         <option>document 2</option>
+                         <option>document 3</option>
+                    </select></center></td>
+              
+              <td><center><select id="select" class="form-control" ng-model="doc.isObligatoireDoc">
+                         <option>Oui</option>
+                         <option>Non</option>
+                         
+                    </select></center></td>
+
+              <td><center><span class="glyphicon glyphicon-minus"></center></td>
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+      </div>
+      <center>
+        <button class="btn btn-outline-success" type="submit" ng-click="save(doc)" >Enregistrer</button>
+        <button class="btn btn-outline-success" type="submit" ng-click="save(doc)" >Annuler</button>
+      </center>
+      </ng-form>
+  </div>
+
+</div>

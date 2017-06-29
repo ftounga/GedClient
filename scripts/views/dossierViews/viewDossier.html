@@ -1,0 +1,128 @@
+<div class="panel panel-default">
+  <div >
+     <center>
+        <ul class="nav nav-tabs">
+          <li class="dropdown active">
+            <a data-toggle="dropdown" class="dropdown-toggle" data-target="">Documents <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li ng-click="transfert(doc.lien)" ng-repeat="doc in docs"><a data-toggle="tab" data-target="#menu1">{{doc.nom}}</a></li>
+            </ul>
+        </li>
+          <li><a data-toggle="tab" data-target="#menu2">Métadonnées</a></li>
+          <li><a data-toggle="tab" data-target="#menu3">Détails</a></li>      
+        </ul>
+  </div>
+
+  <div class="panel-body">
+
+    <!-- Première menuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu -->
+    <div class="tab-content">
+      <div id="menu3" class="tab-pane fade">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-success" >
+              <span>id : {{user.id}}</span>
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <span>nom : {{user.nom}}</span>
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <span>Statut : {{user.statut}}</span>
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <span>Owner : {{user.owner}}</span>
+            </li>            
+          </ul>
+        </div>
+
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+               <li class="list-group-item list-group-item-success">
+                  <span>Date Dernière Modification : {{user.datemodif}}</span>
+              </li>
+              <li class="list-group-item list-group-item-success">
+                  <span>User Dernière Modification : {{user.user_modif}}</span>
+              </li> 
+              <li class="list-group-item list-group-item-success">
+                  <span>Date Création : {{user.datecre}}</span>
+              </li> 
+               <li class="list-group-item list-group-item-success">
+                  <span>User Modification : {{user.user_modif}}</span>
+              </li>      
+           </ul>          
+        </div>
+      </div>
+      <!-- deuxième menuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu -->
+
+      <div id="menu2" class="col-md-12 tab-pane fade">
+          <div class="col-md-12">
+            <div class="col-md-12">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-info">
+                  <center>Métadonnées</center>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée1 : valeur1
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée2 : valeur2
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée3 : valeur3
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+              </ul>             
+            </div>
+        </div>
+
+    </div>
+
+    <!-- troisième menuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu -->
+
+    <div id="menu1" class="col-md-12 tab-pane fade in active">
+          <div class="space">
+              <center>
+                <button class="btn btn-primary">Supprimer le document</button>
+                <button ng-click="save()" class="btn btn-primary">Aller vers le document</button>
+                {{messageAjoutClient}}
+              </center>  
+          </div>
+          <div class="col-md-12">
+              
+              <div class="col-md-2">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-info">
+                  <center>Métadonnées</center>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée1 : valeur1
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée2 : valeur2
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+                <li class="list-group-item list-group-item-success">
+                  Métadonnée3 : valeur3
+                  <a href=""><span class="badge"><span class="glyphicon glyphicon-pencil"> </span></span></a>
+                </li>
+              </ul>             
+              </div>
+              <div class="col-md-10">
+                <object data="{{obj.lien}}" type="application/pdf" title="cv" width="680" height="600" ng-init="obj.lien='pdf/1.pdf'">
+                </object>
+              </div> 
+          </div>
+                   
+    </div>
+      
+   </div>
+
+  </div>
+
+  <div class="panel-footer">
+    
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div>
+     <div class="modal-header">
+            <h4 class="modal-title" id="modal-title">Selectionner le type de document</h4>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <center>
+            Type de Dossier: <select ng-model="data" ng-options="tab.id for tab in tabs" placeholder="type" >
+                             </select>
+          </center>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="pass()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="close()">Cancel</button>
+        </div>
+</div>

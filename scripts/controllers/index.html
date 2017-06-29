@@ -1,0 +1,57 @@
+<div ng-app="ui.bootstrap.demo">
+  <div ng-controller="ModalDemoCtrl">
+    <script type="text/ng-template" id="myModalContent.html">
+      <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+      </div>
+      <div class="modal-body">
+        Demo form submit:
+        <br/>
+        <form ng-submit="ok()">
+          <div class="input-group animated fadeIn">
+            <input type="text" class="form-control finderBar" ng-model="searchTerm" placeholder="City, State..." autofocus>
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" ng-click="ok()">Go!</button>
+        </span>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+      </div>
+    </script>
+
+    <script type="text/ng-template" id="result.html">
+      <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+      </div>
+      <div class="modal-body">
+         You searched for: {{searchTerm}}
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="cancel()">Close</button>
+      </div>
+    </script>
+    <button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
+    <!--<button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>-->
+    <div ng-show="searchTerm">searchTerm from a modal: {{ searchTerm }}</div>
+  </div>
+
+
+</div>
+<!-- AngularJs -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
+
+    <!-- Jquery -->  
+  <script src="/home/fredric/Téléchargements/bootstrap-table-215a8006dcf0601b9c42ffbbc5319aa6e7da10a8/docs/assets/js/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+
+    <!-- ui- Bootstrap -->
+    <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>
+
+<script type="app.js"></script>

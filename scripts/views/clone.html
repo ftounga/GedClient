@@ -1,0 +1,98 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <center>Type Document</center>
+  </div>
+
+  <div class="panel-body">
+    
+    <ng-form ng-submit="save()" name="myForm">
+
+    <div class="row">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-success">
+              <label for="text"> Nom  </label>
+              <input type="text" class="form-control" ng-model="donne.nom">
+            </li>           
+          </ul>
+
+        </div>
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+              <li class="list-group-item list-group-item-success">
+              <label for="text"> Type  </label>
+              <input type="text" class="form-control" ng-model="donne.type">
+            </li> 
+           </ul>
+
+          
+
+        </div>
+
+        
+
+        <div class="col-md-6">
+           <ul class="list-group">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><center>Metadonnées</center><caption>
+
+            <th><center>Type Metadonnee</center></th>
+            <th><center>Obligatoire</center></th>
+            <th><center>Regex</center></th>
+            <th><center>Default value</center></th>
+            <th>Action</th>
+                
+          <tr>              
+              <td><center>metadonnée1</center></td>
+              <td><center>oui</center></td>
+              <td><center>RIB</center></td>
+              <td><center>valeur1</center></td>
+              <td><span class="glyphicon glyphicon-pencil">  </span> <span class="glyphicon glyphicon-trash"></span></td>              
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+        <div class="col-md-6 -col-md-offset-6">
+           <ul class="list-group">
+      
+      
+      <li class="list-group-item list-group-item-info">
+        <table class="table table-bordered table-striped table-condensed">    
+          <caption><center>Dossier</center><caption>
+
+            <th><center>Type Document</center></th>
+            <th><center>Nom Document</center></th>
+            <th>Action</th>
+            
+          <tr>              
+              <td><center>type1</center></td>
+              <td><center>document1</center></td>
+              <td><span class="glyphicon glyphicon-pencil"></span><span class="glyphicon glyphicon-trash"></span></td>             
+          </tr>
+
+        </table>
+       </li>
+      
+
+    </ul>
+        </div>
+
+      </div>
+
+      </div>
+      <center>
+        <button class="btn btn-outline-success" type="submit" ng-click="save(doc)" >Enregistrer</button>
+        <button class="btn btn-outline-success" type="submit" ng-click="save(doc)" >Annuler</button>
+      </center>
+      </ng-form>
+  </div>
+
+</div>
