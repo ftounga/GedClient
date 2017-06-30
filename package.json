@@ -17,6 +17,15 @@
   },
   "homepage": "https://github.com/ftounga/GedClient#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.18.12",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "wiredep": "^4.0.0"
   }
 }
